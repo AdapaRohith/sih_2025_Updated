@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delhi - India Heritage & Culture</title>
+    <link href="../../css/style_new.css" rel="stylesheet" />
+    <link href="../../css/map-style.css" rel="stylesheet" type="text/css" />
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/search-functionality.js"></script>
+    <script
+      src="https://kit.fontawesome.com/49f73a6ecc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .state-hero {
+        background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .state-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .state-hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      .search-section {
+        background: white;
+        padding: 40px 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .search-section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .monuments-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 40px 0;
+      }
+
+      .monument-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .monument-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .monument-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .monument-info {
+        padding: 20px;
+      }
+
+      .monument-info h3 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .monument-info p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .back-button {
+        display: inline-block;
+        background: #4facfe;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 25px;
+        margin: 20px 0;
+        transition: background 0.3s ease;
+      }
+
+      .back-button:hover {
+        background: #3d8bfe;
+      }
+
+      .breadcrumb {
+        background: #f8f9fa;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+      }
+
+      .breadcrumb a {
+        color: #4facfe;
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img
+          class="logo"
+          src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1759345353/logo1_hdzyyx.png"
+          alt="logo"
+        />
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../explore.html">Explore</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="../../contact.html">Contact us</a></li>
+          <li><a href="../../login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="breadcrumb">
+        <a href="../../index.html">Home</a> >
+        <a href="../../explore.html">Explore</a> > <span>Delhi</span>
+      </div>
+
+      <div class="state-hero">
+        <h1>Delhi</h1>
+        <p>
+          Discover the capital city of India with its rich history, magnificent
+          monuments, and vibrant culture. From ancient forts to modern marvels,
+          explore the heart of India.
+        </p>
+      </div>
+
+      <div class="search-section">
+        <h2>Search Monuments & Places in Delhi</h2>
+        <div class="search-box">
+          <form>
+            <input
+              type="text"
+              name="search"
+              id="stateSearch"
+              placeholder="Search for monuments, places, or areas in Delhi"
+            />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="monuments-grid">
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400"
+            alt="Red Fort"
+          />
+          <div class="monument-info">
+            <h3>Red Fort</h3>
+            <p>
+              The Red Fort is a historic fort in Delhi that served as the main
+              residence of the Mughal emperors. It's a UNESCO World Heritage
+              Site and a symbol of India's independence.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400"
+            alt="Qutub Minar"
+          />
+          <div class="monument-info">
+            <h3>Qutub Minar</h3>
+            <p>
+              Qutub Minar is a 73-meter tall minaret built in 1193. It's the
+              tallest brick minaret in the world and a UNESCO World Heritage
+              Site.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400"
+            alt="India Gate"
+          />
+          <div class="monument-info">
+            <h3>India Gate</h3>
+            <p>
+              India Gate is a war memorial dedicated to the soldiers of the
+              British Indian Army who died in World War I. It's a prominent
+              landmark in Delhi.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400"
+            alt="Lotus Temple"
+          />
+          <div class="monument-info">
+            <h3>Lotus Temple</h3>
+            <p>
+              The Lotus Temple is a Bahá'í House of Worship known for its
+              flowerlike shape. It's one of the most visited buildings in the
+              world.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400"
+            alt="Humayun's Tomb"
+          />
+          <div class="monument-info">
+            <h3>Humayun's Tomb</h3>
+            <p>
+              Humayun's Tomb is the tomb of the Mughal Emperor Humayun. It's a
+              UNESCO World Heritage Site and an example of Mughal architecture.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400"
+            alt="Jama Masjid"
+          />
+          <div class="monument-info">
+            <h3>Jama Masjid</h3>
+            <p>
+              Jama Masjid is one of the largest mosques in India, built by
+              Mughal Emperor Shah Jahan. It can accommodate up to 25,000
+              worshippers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin: 40px 0">
+        <a href="../../explore.html" class="back-button">
+          <i class="fa-solid fa-arrow-left"></i> Back to All States
+        </a>
+      </div>
+    </main>
+
+    <script src="../../js/navigation.js"></script>
+  </body>
+</html>

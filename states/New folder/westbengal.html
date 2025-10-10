@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>West Bengal - India Heritage & Culture</title>
+    <link href="../../css/style_new.css" rel="stylesheet" />
+    <link href="../../css/map-style.css" rel="stylesheet" type="text/css" />
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/search-functionality.js"></script>
+    <script
+      src="https://kit.fontawesome.com/49f73a6ecc.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .state-hero {
+        background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .state-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .state-hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        opacity: 0.9;
+      }
+
+      .search-section {
+        background: white;
+        padding: 40px 20px;
+        margin: 20px 0;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .search-section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .monuments-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 40px 0;
+      }
+
+      .monument-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .monument-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .monument-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .monument-info {
+        padding: 20px;
+      }
+
+      .monument-info h3 {
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .monument-info p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .back-button {
+        display: inline-block;
+        background: #43e97b;
+        color: white;
+        padding: 12px 24px;
+        text-decoration: none;
+        border-radius: 25px;
+        margin: 20px 0;
+        transition: background 0.3s ease;
+      }
+
+      .back-button:hover {
+        background: #38d9a9;
+      }
+
+      .breadcrumb {
+        background: #f8f9fa;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+      }
+
+      .breadcrumb a {
+        color: #43e97b;
+        text-decoration: none;
+      }
+
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <img
+          class="logo"
+          src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1759345353/logo1_hdzyyx.png"
+          alt="logo"
+        />
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../explore.html">Explore</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="../../contact.html">Contact us</a></li>
+          <li><a href="../../login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="breadcrumb">
+        <a href="../../index.html">Home</a> >
+        <a href="../../explore.html">Explore</a> > <span>West Bengal</span>
+      </div>
+
+      <div class="state-hero">
+        <h1>West Bengal</h1>
+        <p>
+          Discover the cultural capital of India with its rich heritage,
+          literature, art, and monuments. From the bustling streets of Kolkata
+          to the serene hills of Darjeeling, explore the beauty of Bengal.
+        </p>
+      </div>
+
+      <div class="search-section">
+        <h2>Search Monuments & Places in West Bengal</h2>
+        <div class="search-box">
+          <form>
+            <input
+              type="text"
+              name="search"
+              id="stateSearch"
+              placeholder="Search for monuments, places, or cities in West Bengal"
+            />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="monuments-grid">
+        <div class="monument-card">
+          <img
+            src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1759345989/WestBengal_lsncjm.jpg"
+            alt="Victoria Memorial"
+          />
+          <div class="monument-info">
+            <h3>Victoria Memorial</h3>
+            <p>
+              The Victoria Memorial is a large marble building in Kolkata, built
+              between 1906 and 1921. It's dedicated to the memory of Queen
+              Victoria and is now a museum.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400"
+            alt="Howrah Bridge"
+          />
+          <div class="monument-info">
+            <h3>Howrah Bridge</h3>
+            <p>
+              Howrah Bridge is a cantilever bridge over the Hooghly River in
+              West Bengal. It's one of the busiest bridges in the world and an
+              iconic symbol of Kolkata.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400"
+            alt="Dakshineswar Kali Temple"
+          />
+          <div class="monument-info">
+            <h3>Dakshineswar Kali Temple</h3>
+            <p>
+              Dakshineswar Kali Temple is a Hindu temple located in Dakshineswar
+              near Kolkata. It's famous for its association with Ramakrishna
+              Paramahamsa.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400"
+            alt="Darjeeling"
+          />
+          <div class="monument-info">
+            <h3>Darjeeling</h3>
+            <p>
+              Darjeeling is a hill station in West Bengal known for its tea
+              industry, the Darjeeling Himalayan Railway, and stunning views of
+              Mount Kanchenjunga.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400"
+            alt="Sundarbans"
+          />
+          <div class="monument-info">
+            <h3>Sundarbans National Park</h3>
+            <p>
+              Sundarbans is a mangrove area in the delta formed by the
+              confluence of the Ganges, Brahmaputra, and Meghna Rivers. It's a
+              UNESCO World Heritage Site.
+            </p>
+          </div>
+        </div>
+
+        <div class="monument-card">
+          <img
+            src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400"
+            alt="Kolkata"
+          />
+          <div class="monument-info">
+            <h3>Kolkata</h3>
+            <p>
+              Kolkata is the capital of West Bengal and the cultural capital of
+              India. It's known for its colonial architecture, literature, and
+              vibrant street life.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin: 40px 0">
+        <a href="../../explore.html" class="back-button">
+          <i class="fa-solid fa-arrow-left"></i> Back to All States
+        </a>
+      </div>
+    </main>
+
+    <script src="../../js/navigation.js"></script>
+  </body>
+</html>
