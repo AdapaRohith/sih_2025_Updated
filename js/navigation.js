@@ -12,11 +12,13 @@ function initMobileMenu() {
     const navLinks = document.querySelector('.nav-links');
 
     if (mobileMenuToggle && navLinks) {
+        // Handle mobile menu toggle
         mobileMenuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('mobile-open');
             mobileMenuToggle.classList.toggle('active');
         });
 
+        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (
                 !navLinks.contains(e.target) &&
@@ -27,6 +29,7 @@ function initMobileMenu() {
             }
         });
 
+        // Close menu when clicking nav links
         navLinks.addEventListener('click', (e) => {
             if (e.target.tagName === 'A') {
                 navLinks.classList.remove('mobile-open');

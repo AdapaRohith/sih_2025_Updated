@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - India Heritage & Culture</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/navigation.js"></script>
+    <script
+        src="https://kit.fontawesome.com/49f73a6ecc.js"
+        crossorigin="anonymous"
+    ></script>
+    <script>
+      // Menu functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navSidebar = document.getElementById('navSidebar');
+
+        // Toggle menu (open/close)
+        menuToggle.addEventListener('click', function() {
+          navSidebar.classList.toggle('active');
+          menuToggle.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!navSidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+            navSidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+          }
+        });
+
+        // Close menu when clicking nav links
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navSidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+          });
+        });
+      });
+    </script>
+</head>
+<body>
+    <div class="menu-icon" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <nav class="nav-sidebar" id="navSidebar">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <header class="header">
+        <nav class="navbar">
+            <img
+                class="logo"
+                src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1759345353/logo1_hdzyyx.png"
+                alt="logo"
+            />
+            <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="about.html" class="active">About us</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>About This Project</h1>
+                <p>A personal initiative to digitally preserve and showcase India's incredible cultural heritage through modern technology</p>
+            </div>
+        </section>
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <h2>Project Overview</h2>
+                        <p>India Heritage is a personal project born out of my passion for preserving and showcasing India's incredible cultural diversity. This interactive platform serves as a digital repository where visitors can explore the rich traditions, monuments, arts, and stories from all 29 states of India, making our ancestral legacy accessible to people worldwide.</p>
+                        <div class="mission-stats">
+                            <div class="stat-item">
+                                <h3>29</h3>
+                                <p>States Covered</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>100+</h3>
+                                <p>Heritage Sites</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3>Multiple</h3>
+                                <p>Cultural Forms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mission-visual">
+                        <div class="mission-card">
+                            <div class="mission-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Technology</h3>
+                            <p>Built with modern web technologies to create an immersive and interactive experience for heritage exploration</p>
+                        </div>
+                        <div class="mission-card">
+                            <div class="mission-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Purpose</h3>
+                            <p>Bridging the gap between tradition and technology to preserve cultural heritage for future generations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-section">
+            <div class="container">
+                <div class="story-content">
+                    <div class="story-header">
+                        <h2>Development Story</h2>
+                        <p>The journey of bringing India's heritage to the digital world</p>
+                    </div>
+                    <div class="story-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Inspiration</h3>
+                                <p>Motivated by the incredible diversity of India's cultural heritage and the need to make it accessible through modern technology. The vision was to create an interactive platform that celebrates all 29 states and their unique traditions.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Technical Planning</h3>
+                                <p>Designed the architecture using modern web technologies - HTML5, CSS3, and JavaScript. Focused on creating responsive design, interactive maps, and an intuitive user interface that would work seamlessly across devices.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Implementation</h3>
+                                <p>Built features including state-wise heritage exploration, interactive mapping, user authentication, community engagement tools, and comprehensive content management for cultural information across India.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Current Impact</h3>
+                                <p>The platform now serves as a comprehensive digital repository showcasing India's rich cultural diversity, providing users with authentic insights into monuments, traditions, arts, and practices from every corner of the country.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Developer Section -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About the Developer</h2>
+                    <p>The person behind this cultural heritage preservation project</p>
+                </div>
+                <div class="developer-profile">
+                    <div class="team-card developer-main">
+                        <div class="team-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="team-info">
+                            <h3>Project Creator</h3>
+                            <p class="team-role">Full Stack Developer & Heritage Enthusiast</p>
+                            <p class="team-bio">A passionate developer with a deep appreciation for India's rich cultural heritage. This project combines technical expertise with cultural preservation, creating an interactive platform that makes India's diverse traditions accessible to a global audience.</p>
+                            
+                            <div class="developer-skills">
+                                <span class="skill-tag">Web Development</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Cultural Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Project Features</h2>
+                    <p>Key capabilities and technologies used in this heritage platform</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Interactive Maps</h3>
+                            <p class="feature-desc">State-wise navigation with clickable regions for exploring heritage sites across all 29 states of India</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Responsive Design</h3>
+                            <p class="feature-desc">Optimized for all devices ensuring seamless experience across desktop, tablet, and mobile platforms</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Community Platform</h3>
+                            <p class="feature-desc">User registration, authentication, and community engagement features for heritage enthusiasts</p>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="feature-info">
+                            <h3>Rich Content</h3>
+                            <p class="feature-desc">Comprehensive database of heritage sites, cultural practices, traditions, and historical information</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Achievements Section -->
+        <section class="achievements-section">
+            <div class="container">
+                <div class="achievements-content">
+                    <div class="achievements-text">
+                        <h2>Project Milestones</h2>
+                        <p>Key accomplishments and features implemented in this heritage platform</p>
+                        <div class="achievements-list">
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-map"></i>
+                                </div>
+                                <div class="achievement-details">
+                                    <h3>Complete India Coverage</h3>
+                                    <p>Successfully documented and presented heritage information for all 29 states and union territories</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="achievement-details">
+                                    <h3>Modern Web Platform</h3>
+                                    <p>Built using latest web technologies with responsive design and interactive user interface</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="achievement-details">
+                                    <h3>Community Features</h3>
+                                    <p>Implemented user authentication, registration, and community engagement capabilities</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="achievements-visual">
+                        <div class="achievement-stats">
+                            <div class="stat-card">
+                                <h3>29</h3>
+                                <p>States Covered</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>100+</h3>
+                                <p>Heritage Sites</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>5+</h3>
+                                <p>Key Features</p>
+                            </div>
+                            <div class="stat-card">
+                                <h3>100%</h3>
+                                <p>Responsive Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Stack Section -->
+        <section class="partners-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technologies Used</h2>
+                    <p>Modern web technologies powering this heritage platform</p>
+                </div>
+                <div class="partners-grid">
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h3>HTML5 & CSS3</h3>
+                        <p>Modern markup and styling technologies ensuring semantic structure and beautiful presentation</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <h3>JavaScript</h3>
+                        <p>Interactive functionality including map interactions, user authentication, and dynamic content loading</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        <p>Mobile-first approach ensuring optimal viewing experience across all device sizes and platforms</p>
+                    </div>
+                    <div class="partner-card">
+                        <div class="partner-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Node.js Development</h3>
+                        <p>Local development server setup for testing and development of the heritage platform</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Explore India's Heritage</h2>
+                    <p>Discover the rich cultural heritage of India through this interactive platform</p>
+                    <div class="cta-buttons">
+                        <a href="explore.html" class="primary-btn">Start Exploring</a>
+                        <a href="community.html" class="secondary-btn">Join Community</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>India Heritage</h3>
+                <p>Preserving and celebrating India's rich cultural heritage for future generations.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Heritage</h3>
+                <ul>
+                    <li><a href="#">Monuments</a></li>
+                    <li><a href="#">Festivals</a></li>
+                    <li><a href="#">Arts & Crafts</a></li>
+                    <li><a href="#">Cuisine</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Partnerships</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 India Heritage. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

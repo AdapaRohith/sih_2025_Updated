@@ -4,14 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andhra Pradesh - India Heritage & Culture</title>
-    <link href="../../css/style_new.css" rel="stylesheet" />
+    <link href="../../css/style.css" rel="stylesheet" />
     <link href="../../css/states-unified.css" rel="stylesheet" />
     <link href="../../css/map-style.css" rel="stylesheet" type="text/css" />
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/search-functionality.js"></script>
     <script src="https://kit.fontawesome.com/49f73a6ecc.js" crossorigin="anonymous"></script>
+    <script>
+      // Menu functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navSidebar = document.getElementById('navSidebar');
+
+        if (menuToggle && navSidebar) {
+          // Toggle menu (open/close)
+          menuToggle.addEventListener('click', function() {
+            navSidebar.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+          });
+
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!navSidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+              navSidebar.classList.remove('active');
+              menuToggle.classList.remove('active');
+            }
+          });
+
+          // Close menu when clicking nav links
+          const navLinks = document.querySelectorAll('.nav-menu a');
+          navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              navSidebar.classList.remove('active');
+              menuToggle.classList.remove('active');
+            });
+          });
+        }
+      });
+    </script>
 </head>
 <body class="andhra-pradesh">
+    <div class="menu-icon" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <nav class="nav-sidebar" id="navSidebar">
+      <ul class="nav-menu">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../explore.html">Explore</a></li>
+        <li><a href="../../about.html">About us</a></li>
+        <li><a href="../../community.html">Community</a></li>
+        <li><a href="../../contact.html">Contact us</a></li>
+        <li><a href="../../login.html">Login</a></li>
+      </ul>
+    </nav>
+
     <header class="header">
         <nav class="navbar">
             <img class="logo" src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1759345353/logo1_hdzyyx.png" alt="logo" />
@@ -23,8 +72,8 @@
             <ul class="nav-links">
                 <li><a href="../../index.html">Home</a></li>
                 <li><a href="../../explore.html">Explore</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Community</a></li>
+                <li><a href="../../about.html">About us</a></li>
+                <li><a href="../../community.html">Community</a></li>
                 <li><a href="../../contact.html">Contact us</a></li>
                 <li><a href="../../login.html">Login</a></li>
             </ul>
@@ -64,7 +113,7 @@
                 <p>
                     Andhra Pradesh, often called the "Kohinoor of India," is a state rich in history, culture, and natural beauty. 
                     Known for its ancient temples, classical dance forms like Kuchipudi, and delicious cuisine, the state offers 
-                    a perfect blend of tradition and modernity. From the sacred Tirupati Temple to the historic Charminar, 
+                    a perfect blend of tradition and modernity. From the sacred Tirupati Temple to the beautiful beaches of Visakhapatnam, 
                     Andhra Pradesh is a treasure trove of cultural heritage.
                 </p>
             </div>
@@ -83,28 +132,28 @@
             <h2>Explore Deep Culture</h2>
             <div class="culture-cards">
                 <div class="culture-card">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Arts & Crafts">
+                    <img src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1760417338/Ap_Arts_nijobx.webp" alt="Arts & Crafts">
                     <div class="culture-card-content">
                         <h3>Arts & Crafts</h3>
                         <p>Discover traditional handicrafts and artistic heritage</p>
                     </div>
                 </div>
                 <div class="culture-card">
-                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400" alt="Cuisine">
+                    <img src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1760417315/andhra-cuisine_pfz7bo.webp" alt="Cuisine">
                     <div class="culture-card-content">
                         <h3>Cuisine</h3>
                         <p>Experience the authentic flavors of Andhra Pradesh</p>
                     </div>
                 </div>
                 <div class="culture-card">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Festivals & Traditions">
+                    <img src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1760417335/ap_Fesival_xa6mqz.webp" alt="Festivals & Traditions">
                     <div class="culture-card-content">
                         <h3>Festivals & Traditions</h3>
                         <p>Celebrate the vibrant festivals and cultural traditions</p>
                     </div>
                 </div>
                 <div class="culture-card">
-                    <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400" alt="Music & Dance">
+                    <img src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1760417310/Ap_Dance_r78dan.webp" alt="Music & Dance">
                     <div class="culture-card-content">
                         <h3>Music & Dance</h3>
                         <p>Immerse in classical music and traditional dance forms</p>
@@ -127,31 +176,31 @@
 
         <div class="monuments-grid">
             <div class="monument-card">
-                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Tirupati Temple">
+                <img src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1759345395/Andhra_Pradesh_zhmsm0.jpg" alt="Tirupati Temple">
                 <div class="monument-info">
                     <h3>Tirupati Temple</h3>
                     <p>The most visited religious place in the world, dedicated to Lord Venkateswara. Known for its magnificent architecture and spiritual significance.</p>
                 </div>
             </div>
             <div class="monument-card">
-                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400" alt="Charminar">
+                <img src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1760417354/Undavalli_Caves_Guntur_pycqn7.jpg" alt="Undavalli Caves">
                 <div class="monument-info">
-                    <h3>Charminar</h3>
+                    <h3>Undavalli Caves</h3>
                     <p>A historic monument and mosque located in Hyderabad. Built in 1591, it's one of the most recognized structures of India.</p>
                 </div>
             </div>
             <div class="monument-card">
-                <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400" alt="Golconda Fort">
+                <img src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1760695606/Veerabhadra_Temple_Lepakshi_golwqq.jpg" alt="Veerabhadra Temple">
                 <div class="monument-info">
-                    <h3>Golconda Fort</h3>
-                    <p>A historic fort located in Hyderabad. Known for its acoustic architecture and as the center of diamond trade in medieval India.</p>
+                    <h3>Veerabhadra Temple</h3>
+                    <p>A historic temple located in Lepakshi. Known for its stunning architecture and the hanging pillar, it's a significant site for devotees.</p>
                 </div>
             </div>
             <div class="monument-card">
-                <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400" alt="Konark Sun Temple">
+                <img src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1760695718/Chandragiri_Fort_Tirupati_ysl8fc.jpg" alt="Chandragiri Fort">
                 <div class="monument-info">
-                    <h3>Konark Sun Temple</h3>
-                    <p>A UNESCO World Heritage Site, this 13th-century temple is dedicated to the Sun God and is famous for its architectural grandeur.</p>
+                    <h3>Chandragiri Fort</h3>
+                    <p>A historic fort located in Chandragiri, known for its impressive architecture and rich history.</p>
                 </div>
             </div>
         </div>

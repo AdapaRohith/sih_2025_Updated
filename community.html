@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - India Heritage & Culture</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/community.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/navigation.js"></script>
+    <script
+        src="https://kit.fontawesome.com/49f73a6ecc.js"
+        crossorigin="anonymous"
+    ></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const navSidebar = document.getElementById('navSidebar');
+
+            if (menuToggle && navSidebar) {
+                // Toggle menu (open/close)
+                menuToggle.addEventListener('click', function() {
+                    navSidebar.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!navSidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+                        navSidebar.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                    }
+                });
+
+                // Close menu when clicking nav links
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navSidebar.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="menu-icon" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <nav class="nav-sidebar" id="navSidebar">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
+    <!-- Desktop Header -->
+    <header class="desktop-header">
+        <nav class="desktop-nav">
+            <img class="logo" src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1759345353/logo1_hdzyyx.png" alt="India Heritage Logo">
+            <ul class="desktop-nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="community.html" class="active">Community</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Join Our Heritage Community</h1>
+                <p>Connect with fellow heritage enthusiasts, share your stories, and preserve India's rich cultural legacy together</p>
+                <div class="hero-buttons">
+                    <button class="primary-btn">Join Community</button>
+                    <a href="explore.html"><button class="secondary-btn">Explore us</button></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Stats -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>500+</h3>
+                            <p>Active Members</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>25,000+</h3>
+                            <p>Discussions</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-camera"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>1000+</h3>
+                            <p>Heritage Photos</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>1,500+</h3>
+                            <p>Locations Covered</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Features -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Community Features</h2>
+                    <p>Discover what makes our heritage community special</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-photo-video"></i>
+                        </div>
+                        <h3>Share Heritage</h3>
+                        <p>Upload and share photos of monuments, festivals, art, and cultural sites from your region</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Tell Stories</h3>
+                        <p>Share oral histories, legends, and personal experiences related to India's cultural heritage</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Expert Forums</h3>
+                        <p>Connect with historians, archaeologists, and cultural experts for in-depth discussions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Events & Meetups</h3>
+                        <p>Join local heritage walks, cultural events, and community meetups in your city</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Learn & Educate</h3>
+                        <p>Access educational resources and share knowledge about India's diverse heritage</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Preservation Efforts</h3>
+                        <p>Collaborate on heritage preservation projects and documentation initiatives</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Discussions -->
+        <section class="discussions-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Recent Discussions</h2>
+                    <p>Join the conversation about India's heritage</p>
+                </div>
+                <div class="discussions-grid">
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <div class="user-info">
+                                <div class="avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="user-details">
+                                    <h4>Priya Sharma</h4>
+                                    <span>Heritage Enthusiast</span>
+                                </div>
+                            </div>
+                            <div class="discussion-meta">
+                                <span>2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="discussion-content">
+                            <h3>Rediscovering the Lost Temples of Hampi</h3>
+                            <p>Recently visited Hampi and discovered some lesser-known temples. The architecture and stone carvings are absolutely breathtaking...</p>
+                        </div>
+                        <div class="discussion-footer">
+                            <div class="discussion-stats">
+                                <span><i class="fas fa-heart"></i> 24</span>
+                                <span><i class="fas fa-comment"></i> 8</span>
+                                <span><i class="fas fa-share"></i> 3</span>
+                            </div>
+                            <div class="discussion-tags">
+                                <span class="tag">Architecture</span>
+                                <span class="tag">Karnataka</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <div class="user-info">
+                                <div class="avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="user-details">
+                                    <h4>Rajesh Kumar</h4>
+                                    <span>Cultural Historian</span>
+                                </div>
+                            </div>
+                            <div class="discussion-meta">
+                                <span>5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="discussion-content">
+                            <h3>Traditional Weaving Techniques of Odisha</h3>
+                            <p>Documenting the intricate handloom traditions of Sambalpuri weavers. These techniques have been passed down for generations...</p>
+                        </div>
+                        <div class="discussion-footer">
+                            <div class="discussion-stats">
+                                <span><i class="fas fa-heart"></i> 31</span>
+                                <span><i class="fas fa-comment"></i> 12</span>
+                                <span><i class="fas fa-share"></i> 5</span>
+                            </div>
+                            <div class="discussion-tags">
+                                <span class="tag">Crafts</span>
+                                <span class="tag">Odisha</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="discussion-card">
+                        <div class="discussion-header">
+                            <div class="user-info">
+                                <div class="avatar">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="user-details">
+                                    <h4>Meena Patel</h4>
+                                    <span>Folk Music Researcher</span>
+                                </div>
+                            </div>
+                            <div class="discussion-meta">
+                                <span>1 day ago</span>
+                            </div>
+                        </div>
+                        <div class="discussion-content">
+                            <h3>Preserving Rajasthani Folk Songs</h3>
+                            <p>Working on a project to document and preserve traditional folk songs from rural Rajasthan. Need help from local communities...</p>
+                        </div>
+                        <div class="discussion-footer">
+                            <div class="discussion-stats">
+                                <span><i class="fas fa-heart"></i> 45</span>
+                                <span><i class="fas fa-comment"></i> 18</span>
+                                <span><i class="fas fa-share"></i> 7</span>
+                            </div>
+                            <div class="discussion-tags">
+                                <span class="tag">Music</span>
+                                <span class="tag">Rajasthan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more">
+                    <button class="secondary-btn">View All Discussions</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Guidelines -->
+        <section class="guidelines-section">
+            <div class="container">
+                <div class="guidelines-content">
+                    <div class="guidelines-text">
+                        <h2>Community Guidelines</h2>
+                        <p>Help us maintain a respectful and enriching environment for all heritage enthusiasts</p>
+                        <ul class="guidelines-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Share authentic and accurate heritage information</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Respect cultural sensitivities and local customs</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Credit original sources and photographers</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Engage in constructive and respectful discussions</span>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <span>Report any inappropriate content or behavior</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="guidelines-visual">
+                        <div class="guideline-card">
+                            <i class="fas fa-handshake"></i>
+                            <h3>Respectful Community</h3>
+                        </div>
+                        <div class="guideline-card">
+                            <i class="fas fa-heart"></i>
+                            <h3>Passionate About Heritage</h3>
+                        </div>
+                        <div class="guideline-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Knowledge Sharing</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join CTA -->
+        <section class="join-cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Join Our Heritage Community?</h2>
+                    <p>Connect with thousands of heritage enthusiasts and start your journey of cultural discovery</p>
+                    <div class="cta-buttons">
+                        <button class="primary-btn large">Create Account</button>
+                        <button class="secondary-btn large">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>India Heritage</h3>
+                <p>Preserving and celebrating India's rich cultural heritage for future generations.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Heritage</h3>
+                <ul>
+                    <li><a href="#">Monuments</a></li>
+                    <li><a href="#">Festivals</a></li>
+                    <li><a href="#">Arts & Crafts</a></li>
+                    <li><a href="#">Cuisine</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 India Heritage. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

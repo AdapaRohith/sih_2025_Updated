@@ -4,188 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore</title>
-    <link href="css/style_new.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link href="css/explore.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/49f73a6ecc.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/search-functionality.js"></script>
-    <style>
-      .state-card a {
-        text-decoration: none;
-        color: inherit;
-        display: block;
-        transition: transform 0.3s ease;
-      }
+    <script src="js/search-functionality.js">    </script>
+    <script>
+      // Menu functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navSidebar = document.getElementById('navSidebar');
 
-      .state-card a:hover {
-        transform: scale(1.05);
-      }
+        // Toggle menu (open/close)
+        menuToggle.addEventListener('click', function() {
+          navSidebar.classList.toggle('active');
+          menuToggle.classList.toggle('active');
+        });
 
-      .state-card a:hover .card-title {
-        color: #667eea;
-      }
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          if (!navSidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+            navSidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+          }
+        });
 
-      .nav-links a.active {
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
-        color: white;
-        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-      }
-
-      .nav-links a.active:hover {
-        background: linear-gradient(135deg, #5855eb, #7c3aed);
-        transform: translateY(-2px);
-        box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
-      }
-
-      .header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
-        background: rgba(15, 15, 35, 0.9);
-        backdrop-filter: blur(20px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
-      }
-
-      .navbar {
-        max-width: 1400px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.5rem 2rem;
-      }
-
-      .logo {
-        height: 50px;
-        width: auto;
-        transition: transform 0.3s ease;
-      }
-
-      .logo:hover {
-        transform: scale(1.05);
-      }
-
-      .mobile-menu-toggle {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        background: none;
-        border: none;
-        padding: 8px;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-      }
-
-      .mobile-menu-toggle:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-
-      .mobile-menu-toggle span {
-        width: 24px;
-        height: 2px;
-        background: linear-gradient(90deg, #6366f1, #8b5cf6);
-        margin: 3px 0;
-        transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        border-radius: 2px;
-      }
-
-      .mobile-menu-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-      }
-
-      .mobile-menu-toggle.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .mobile-menu-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-      }
-
-      .nav-links {
-        display: flex;
-        list-style: none;
-        gap: 2.5rem;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-      }
-
-      .nav-links a {
-        color: #ffffff;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.95rem;
-        padding: 0.75rem 1.5rem;
-        border-radius: 50px;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .nav-links a:hover {
-        background: rgba(99, 102, 241, 0.2);
-        color: #a5b4fc;
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
-      }
-
-      @media (max-width: 768px) {
-        .mobile-menu-toggle {
-          display: flex;
-        }
-
-        .nav-links {
-          position: fixed;
-          top: 100px;
-          left: -100%;
-          width: 100%;
-          height: calc(100vh - 100px);
-          background: rgba(15, 15, 35, 0.95);
-          backdrop-filter: blur(20px);
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center;
-          padding-top: 3rem;
-          gap: 2rem;
-          transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-          border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-links.mobile-open {
-          left: 0;
-        }
-
-        .nav-links a {
-          padding: 1rem 2rem;
-          font-size: 1.1rem;
-          width: 200px;
-          text-align: center;
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          background: rgba(255, 255, 255, 0.05);
-        }
-
-        .navbar {
-          padding: 0 1rem;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .logo {
-          height: 40px;
-        }
-
-        .navbar {
-          padding: 0 0.75rem;
-        }
-      }
-    </style>
+        // Close menu when clicking nav links
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navSidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+          });
+        });
+      });
+    </script>
   </head>
   <body>
+    <div class="menu-icon" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <nav class="nav-sidebar" id="navSidebar">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+
     <header class="header">
       <nav class="navbar">
         <img
@@ -201,8 +75,8 @@
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="explore.html" class="active">Explore</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Community</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="community.html">Community</a></li>
           <li><a href="contact.html">Contact us</a></li>
           <li><a href="login.html">Login</a></li>
         </ul>

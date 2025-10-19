@@ -1,44 +1,85 @@
-clres<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>India Map - Explore Heritage & Culture</title>
-    <link href="css/style_new.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link href="css/map-style.css" rel="stylesheet" type="text/css" />
     <script src="js/jquery.min.js"></script>
     <script src="js/map-config.js"></script>
     <script src="js/map-interact.js"></script>
     <script src="js/search-functionality.js"></script>
     <script src="js/navigation.js"></script>
+    <script>
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.getElementById('menuToggle');
+        const navSidebar = document.getElementById('navSidebar');
+
+        menuToggle.addEventListener('click', function() {
+          navSidebar.classList.toggle('active');
+          menuToggle.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+          if (!navSidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+            navSidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+          }
+        });
+
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            navSidebar.classList.remove('active');
+            menuToggle.classList.remove('active');
+          });
+        });
+      });
+    </script>
     <script
       src="https://kit.fontawesome.com/49f73a6ecc.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <header class="header">
-      <nav class="navbar">
+    <div class="menu-icon" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <nav class="nav-sidebar" id="navSidebar">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Desktop Navigation Header -->
+    <header class="desktop-header">
+      <nav class="desktop-navbar">
         <img
           class="logo"
           src="https://res.cloudinary.com/dnyuxgr9i/image/upload/v1759345353/logo1_hdzyyx.png"
-          alt="logo"
+          alt="Explore India's Heritage Logo"
         />
-        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links">
+        <ul class="desktop-nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="explore.html">Explore</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Community</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="community.html">Community</a></li>
           <li><a href="contact.html">Contact us</a></li>
           <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
     </header>
+    
     <main class="main-content" id="home">
       <div class="hero-section">
         <div class="content">
@@ -65,7 +106,7 @@ clres<!DOCTYPE html>
         </div>
         <div class="buttons">
           <a href="explore.html"><button>Explore Us</button></a>
-          <a href=""><button>Community</button></a>
+          <a href="community.html"><button>Community</button></a>
         </div>
       </div>
 

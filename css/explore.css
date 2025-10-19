@@ -1,108 +1,14 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+/* =================== EXPLORE PAGE STYLES =================== */
 
-body {
-    font-family: 'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #0f0f23;
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.03) 0%, transparent 50%);
-    color: #ffffff;
-    line-height: 1.6;
-    overflow-x: hidden;
-    min-height: 100vh;
-}
+/* Note: Mobile navigation styles inherited from main style.css */
 
-.header {
-    background: rgba(15, 15, 35, 0.9) !important;
-    backdrop-filter: blur(20px) !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-    position: fixed !important;
-    width: 100% !important;
-    top: 0 !important;
-    z-index: 1000 !important;
-    transition: all 0.3s ease !important;
-}
-
-.header-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 2rem;
-}
-
-.logo-img {
-    height: 100px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-    transform: scale(1.05);
-}
-
-.mobile-menu-btn {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    background: none;
-    border: none;
-    padding: 8px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.mobile-menu-btn:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.mobile-menu-btn span {
-    width: 24px;
-    height: 2px;
-    background: linear-gradient(90deg, #6366f1, #8b5cf6);
-    margin: 3px 0;
-    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 2px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    gap: 2.5rem;
-    align-items: center;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 500;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-
-
-.nav-links a:hover {
-    background: rgba(99, 102, 241, 0.2);
-    color: #a5b4fc;
-}
-
+/* ===== EXPLORE PAGE OVERRIDES ===== */
 main {
     padding-top: 120px;
     min-height: 100vh;
 }
+
+/* ===== CONTENT SECTIONS ===== */
 
 .template {
     background: rgba(255, 255, 255, 0.05);
@@ -112,7 +18,6 @@ main {
     border-radius: 24px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
     padding: 3rem 2rem;
-    margin-bottom: 3rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     animation: fadeInUp 1s ease;
 }
@@ -124,27 +29,21 @@ main {
     margin-bottom: 2.5rem;
     background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     line-height: 1.1;
     letter-spacing: -0.02em;
 }
 
 .search-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 4rem;
     position: relative;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 4rem;
+    margin: 0 auto 4rem;
 }
 
 .search-box input {
     width: 100%;
-    padding: 1.2rem 1.8rem;
+    padding: 1.2rem 1.8rem 1.2rem 1.8rem;
     padding-right: 4rem;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 60px;
@@ -169,6 +68,8 @@ main {
 .search-box button {
     position: absolute;
     right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     width: 44px;
     height: 44px;
     border: none;
@@ -192,14 +93,14 @@ main {
     text-align: center;
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: 700;
-    color: #ffffff;
     margin: 4rem 0 2.5rem 0;
     background: linear-gradient(135deg, #f59e0b, #ef4444);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
+/* ===== TRAILS SECTION ===== */
 .trails-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -215,44 +116,12 @@ main {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-    z-index: 1;
-}
-
-.trail-card::before,
-.trail-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1;
-}
-
-.trail-card::before {
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    opacity: 1;
-}
-
-.trail-card::after {
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .trail-card:hover {
     transform: translateY(-12px);
-}
-
-.trail-card:hover::before {
-    opacity: 0;
-}
-
-.trail-card:hover::after {
-    opacity: 1;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
 }
 
 .trail-card img {
@@ -267,7 +136,7 @@ main {
 }
 
 .card-title {
-     position: absolute;
+    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
@@ -289,6 +158,7 @@ main {
     color: #a855f7;
 }
 
+/* ===== STATES SECTION ===== */
 .states-section {
     max-width: 1400px;
     margin: 0 auto;
@@ -299,12 +169,11 @@ main {
     text-align: center;
     font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 800;
-    color: #ffffff;
     margin-bottom: 3rem;
     background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     letter-spacing: -0.01em;
 }
 
@@ -359,6 +228,22 @@ main {
     color: #a5b4fc;
 }
 
+.state-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.state-card a:hover {
+    transform: scale(1.05);
+}
+
+.state-card a:hover .card-title {
+    color: #667eea;
+}
+
+/* ===== ANIMATIONS ===== */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -370,241 +255,42 @@ main {
     }
 }
 
-@keyframes slideInRight {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.template {
-    animation: fadeInUp 1s ease-out;
-}
-
-.nav-links li {
-    animation: slideInRight 0.6s ease-out;
-    animation-delay: calc(var(--i) * 0.1s);
-    animation-fill-mode: both;
-}
-
-.nav-links li:nth-child(1) { --i: 1; }
-.nav-links li:nth-child(2) { --i: 2; }
-.nav-links li:nth-child(3) { --i: 3; }
-.nav-links li:nth-child(4) { --i: 4; }
-.nav-links li:nth-child(5) { --i: 5; }
-
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: flex;
-    }
-
-    nav {
-        position: fixed;
-        top: 100px;
-        left: -100%;
-        width: 100%;
-        height: calc(100vh - 100px);
-        background: rgba(15, 15, 35, 0.95);
-        backdrop-filter: blur(20px);
-        transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    nav.mobile-nav-open {
-        left: 0;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding-top: 3rem;
-        gap: 2rem;
-        height: 100%;
-    }
-
-    .nav-links a {
-        padding: 1rem 2rem;
-        font-size: 1.1rem;
-        width: 200px;
-        text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 255, 255, 0.05);
-    }
-
-    .template {
-        margin: 1rem;
-        padding: 2rem 1.5rem;
-    }
-
-    .template h1 {
-        font-size: clamp(2rem, 6vw, 3rem);
-        margin-bottom: 2rem;
-    }
-
-    .trails-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .trail-card img {
-        height: 220px;
-    }
-
-    .state-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        padding: 1rem 0;
-    }
-
-    .states-section {
-        padding: 2rem 1rem;
-    }
-
-    main {
-        padding-top: 100px;
-    }
+    .template { margin: 1rem; padding: 2rem 1.5rem; }
+    .template h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 2rem; }
+    .trails-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .trail-card img { height: 220px; }
+    .state-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; padding: 1rem 0; }
+    .states-section { padding: 2rem 1rem; }
+    main { padding-top: 100px; }
 }
 
 @media (max-width: 480px) {
-    .header-container {
-        padding: 1rem 1rem;
-    }
-
-    .logo-img {
-        height: 40px;
-    }
-
-    .template {
-        margin: 0.5rem;
-        padding: 1.5rem 1rem;
-        border-radius: 16px;
-    }
-
-    .template h1 {
-        font-size: clamp(1.8rem, 7vw, 2.5rem);
-        margin-bottom: 1.5rem;
-    }
-
-    .search-box input {
-        padding: 1rem 1.5rem;
-        padding-right: 3.5rem;
-        font-size: 0.95rem;
-    }
-
-    .search-box button {
-        width: 40px;
-        height: 40px;
-        right: 6px;
-    }
-
-    .trail-card img {
-        height: 180px;
-    }
-
-    .card-title {
-        font-size: 1.1rem;
-        padding: 2rem 1rem 1rem;
-    }
-
-    .state-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-    }
-
-    .state-card img {
-        height: 160px;
-    }
-
-    .states-section {
-        padding: 1.5rem 0.5rem;
-    }
-
-    .states-section h2 {
-        margin-bottom: 2rem;
-    }
+    .template { margin: 0.5rem; padding: 1.5rem 1rem; border-radius: 16px; }
+    .template h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); margin-bottom: 1.5rem; }
+    .search-box input { padding: 1rem 1.5rem 1rem 1.5rem; padding-right: 3.5rem; font-size: 0.95rem; }
+    .search-box button { width: 40px; height: 40px; right: 6px; }
+    .trail-card img { height: 180px; }
+    .card-title { font-size: 1.1rem; padding: 2rem 1rem 1rem; }
+    .state-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .state-card img { height: 160px; }
+    .states-section { padding: 1.5rem 0.5rem; }
+    .states-section h2 { margin-bottom: 2rem; }
 }
 
 @media (min-width: 1200px) {
-    .template {
-        padding: 4rem 3rem;
-    }
-
-    .template h1 {
-        font-size: clamp(3.5rem, 5vw, 4.5rem);
-        margin-bottom: 3rem;
-    }
-
-    .search-box input {
-        padding: 1.4rem 2rem;
-        padding-right: 4.5rem;
-        font-size: 1.1rem;
-    }
-
-    .search-box button {
-        width: 48px;
-        height: 48px;
-        right: 10px;
-    }
-
-    .trails-grid {
-        gap: 3rem;
-    }
-
-    .trail-card img {
-        height: 320px;
-    }
-
-    .state-grid {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2.5rem;
-    }
-
-    .state-card img {
-        height: 250px;
-    }
-
-    .states-section {
-        padding: 4rem 2rem;
-    }
+    .template { padding: 4rem 3rem; }
+    .template h1 { font-size: clamp(3.5rem, 5vw, 4.5rem); margin-bottom: 3rem; }
+    .search-box input { padding: 1.4rem 2rem 1.4rem 2rem; padding-right: 4.5rem; font-size: 1.1rem; }
+    .search-box button { width: 48px; height: 48px; right: 10px; }
+    .trails-grid { gap: 3rem; }
+    .trail-card img { height: 320px; }
+    .state-grid { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+    .state-card img { height: 250px; }
+    .states-section { padding: 4rem 2rem; }
 }
 
 @media (min-width: 1600px) {
-    .header-container {
-        max-width: 1600px;
-    }
-    
-    .template {
-        max-width: 1600px;
-    }
-    
-    .states-section {
-        max-width: 1600px;
-    }
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #6366f1, #8b5cf6);
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #5855eb, #7c3aed);
-}
-
-*:focus-visible {
-    outline: 2px solid #6366f1;
-    outline-offset: 2px;
+    .template, .states-section { max-width: 1600px; }
 }
